@@ -11,34 +11,44 @@ export default function Home(){
         navigate('login')
     }
 
-    return <section className="bg-[#F9F9F9] h-[100vh] flex justify-between">
-        <div className="w-[28.5%] flex flex-col mt-[320px] items-end">
-            <img src={bulb} alt="pic" className="h-8 mr-[240px] mt-10"/>
-            <p className="bg-white font-medium border  border-slate-100 px-4 py-2 w-max rounnded-lg items-start mr-[104px]">We're always there</p>
-            <p className="bg-white font-medium border border-slate-100 px-4 py-2 rounnded-lg w-max mt-4">Find anything you want to know!</p>
-        </div>
-        <div className="">
-            <p className="text-center text-[#1A54D3] text-[26px] font-bold pt-20">Connecting Generations Through Seamless Translation</p>.
-            <p className="text-center mt-4 text-[80px] font-bold">What if you could ask<br/> anything?</p>
-            <p className="text-center mt-10 text-slate-600 text-[20px]">HudumaVoice is a cutting-edge AI assistant designed to offer human-like voice<br/> conversations, extensive knowledge, and multilingual support.</p>
-
-            <div className="relative mt-20">
-            <div className="absolute top-10 left-1/2 transform mt-4 -translate-x-1/2 z-10">
-                <button
-                className="border bg-[#0257F6] text-white rounded-full font-medium px-10 py-4 text-[20px] hover:cursor-pointer"
-                onClick={navigateToLogin}
-                >
+    return (
+        <>
+         <div className="bg-gray-100 font-sans">
+         <div className="container mx-auto px-4 py-10">
+         <section class="bg-gradient-to-br from-blue-500 to-purple-500 text-white rounded-lg shadow-lg py-16 px-10 mb-8 flex flex-col items-center text-center">
+            <h1 class="text-3xl font-bold mb-4">Speak Easy, Understand All</h1>
+            <p class="text-lg mb-8">Instantly translate using your voice.  Breaking down language barriers in Kenya.</p>
+            <div class="flex items-center justify-center w-full">
+                <button id="voice-translate-btn" class="bg-white text-blue-500 font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300 ease-in-out shadow-md flex items-center"
+                onClick={navigateToLogin}>
                 Get Started
-                </button>
+                                 </button>
             </div>
+        </section>
 
-            <img src={sound} alt="pic" className="w-full h-[170px] object-cover"/>
+        <section class="bg-white rounded-lg shadow-md py-10 px-8 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card bg-gray-100 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold text-teal-500 mb-4">Image Translation</h3>
+                    <p class="text-gray-700 mb-4">Upload an image and get the text translated.</p>
+                </div>
+                <div class="service-card bg-gray-100 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold text-teal-500 mb-4">Wide Language Support</h3>
+                    <p class="text-gray-700 mb-4">Translate to and from many Kenyan languages.</p>
+                </div>
+                <div class="service-card bg-gray-100 rounded-lg p-6 flex flex-col justify-between">
+                    <h3 class="text-xl font-semibold text-teal-500 mb-4">User-Friendly Interface</h3>
+                    <p class="text-gray-700 mb-4">Simple and intuitive design for all users.</p>
+                </div>
             </div>
+        </section>
 
+        <footer class="bg-gray-800 text-white rounded-lg py-4 px-8 text-center">
+            <p>© 2025 Kenya Language Bridge. All rights reserved.</p>
+        </footer>
         </div>
-        <div className="w-[28.5%] flex flex-col mt-[280px]">
-            <img src={pimbi} alt="pic" className="w-[40%] ml-20"/>
-            <p className="bg-white font-medium border border-slate-100 px-4 py-2 rounnded-lg w-max">Hi, I will always help you!</p>
         </div>
-    </section>
+        </>
+    )
 }

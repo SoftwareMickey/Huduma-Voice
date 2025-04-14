@@ -125,7 +125,7 @@ export default function Login(){
             setInputPassword('')
 
             // * used to navigate between pages
-            navigate(`../${data.user.id}/language`)
+            navigate(`../${data.user.id}/dashboard`)
         }else{
             const data = await response.json()
             console.log(data)
